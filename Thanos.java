@@ -26,20 +26,15 @@ public class Thanos {
 	    idols.add(doctor);
 
 
-	    thor.setAge(1501);
+	   thor.setAge(1501);
 
-	    Collections.shuffle(idols);
+	   Collections.shuffle(idols);
 
-
-		while (removed < idols.size()){
-	          idols.remove(idols.size() -1);
-		  removed++;
-		}
-
+	   idols.subList(idols.size()/2,idols.size()).clear();
 	
-	    for(Hero hero : idols){
+	   for(Hero hero : idols){
 	      System.out.println("Name des Helden: "+hero.getName()+". Das Alter des Helden: "+hero.getAge());
-	    }
+	   } 
 
 
     }
